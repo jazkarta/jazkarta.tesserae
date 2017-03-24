@@ -18,6 +18,10 @@
       <element remove="True">banner 2400:1600</element>
     </value>
   </records>
+  <records prefix="plone.resources/jazkarta-tesserae-mosaic"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'
+           remove="True">
+  </records>
 
   <records prefix="plone.resources/bootstrap-carousel"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'
