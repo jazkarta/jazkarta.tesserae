@@ -1,0 +1,37 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="jazkarta.tesserae">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <includeDependencies package="." />
+
+  <include package=".browser" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="jazkarta.tesserae"
+      directory="profiles/default"
+      description="Installs jazkarta.tesserae mosaic tiles and styles."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="jazkarta.tesserae (uninstall)"
+      directory="profiles/uninstall"
+      description="Installs jazkarta.tesserae mosaic tiles and styles."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="jazkarta.tesserae-hiddenprofiles" />
+
+  <adapter factory=".slider.SliderConfigAdapter" />
+
+</configure>
