@@ -30,9 +30,9 @@ class SliderView(BrowserView):
                 item['url'] = (obj.link if obj.link else
                                uuidToCatalogBrain(obj.content).getURL())
             elif getattr(obj, 'getRemoteUrl', None):
-                item['url'] = item.getRemoteUrl()
+                item['url'] = obj.getRemoteUrl()
             else:
-                item['url'] = item.absolute_url()
+                item['url'] = obj.absolute_url()
             item['title'] = obj.title
             item['description'] = obj.description
             images_view = obj.unrestrictedTraverse('@@images')
