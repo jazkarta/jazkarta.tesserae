@@ -1,7 +1,7 @@
 import json
 from Products.Five import BrowserView
 from plone.directives import form
-from plone.app.uuid.utils import uuidToCatalogBrain
+from plone.app.standardtiles.existingcontent import uuidToCatalogBrainUnrestricted
 from ..slider import ISliderConfig
 from .. import _
 
@@ -27,8 +27,13 @@ class SliderView(BrowserView):
         for obj in content:
             item = {}
             if getattr(obj, 'link', None) or getattr(obj, 'content', None):
-                item['url'] = (obj.link if obj.link else
-                               uuidToCatalogBrain(obj.content).getURL())
+                if obj.link:
+                    item['url'] = obj.link
+                else:
+                    brain = uuidToCatalogBrainUnrestricted(obj.content)
+                    if brain:
+                        item['url'] = brain.getURL()
+
             elif getattr(obj, 'getRemoteUrl', None):
                 item['url'] = obj.getRemoteUrl()
             else:
