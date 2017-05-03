@@ -42,6 +42,7 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'setuptools',
         'z3c.jbot',
+        'plone.app.mosaic',
         'plone.app.imagecropping',
             # when used with Plone 5.0 make sure to use
             # plone.app.imagecropping branch=1.5.x
