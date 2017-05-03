@@ -42,7 +42,10 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'setuptools',
         'z3c.jbot',
-        'plone.app.imagecropping<2.0',
+        'plone.app.imagecropping',
+            # when used with Plone 5.0 make sure to use
+            # plone.app.imagecropping branch=1.5.x
+            # when used with Plone 5.1 pin plone.app.imagecropping to 2.0.1+
         'five.grok',
         'plone.directives.form',
     ],
