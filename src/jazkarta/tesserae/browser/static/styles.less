@@ -93,6 +93,27 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
   opacity: 0;
 }
 
+.background-image-tile {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.parallax {
+    background-attachment: fixed;
+  }
+
+  .colored-background {
+    padding: 65px 0;
+  }
+}
+
+.mosaic-light-text-tile {
+  color: white;
+  p {
+    color: white;
+  }
+}
+
 .mosaic-tile.mosaic-tile-full-width {
   margin-left: -@plone-grid-gutter-width/2;
   margin-right: -@plone-grid-gutter-width/2;

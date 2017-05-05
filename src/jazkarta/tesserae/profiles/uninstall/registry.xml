@@ -38,4 +38,19 @@
            remove="True">
   </records>
 
+  <record name="plone.app.tiles">
+    <value purge="false">
+      <element remove="True">jazkarta.tesserae.content_summary</element>
+      <element remove="True">jazkarta.tesserae.collection_summary</element>
+      <element remove="True">jazkarta.tesserae.background_image</element>
+    </value>
+  </record>
+
+  <records prefix="plone.app.mosaic.app_tiles.jazkarta_tesserae_content_summary"
+           interface="plone.app.mosaic.interfaces.ITile" remove="True" />
+  <records prefix="plone.app.mosaic.app_tiles.jazkarta_tesserae_collection_summary"
+           interface="plone.app.mosaic.interfaces.ITile" remove="True" />
+  <records prefix="plone.app.mosaic.app_tiles.jazkarta_tesserae_background_image"
+           interface="plone.app.mosaic.interfaces.ITile" remove="True" />
+
 </registry>
