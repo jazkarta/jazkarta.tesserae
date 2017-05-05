@@ -4,7 +4,8 @@
   <record name="plone.app.mosaic.default_available_actions">
     <value purge="False">
       <element>tile-full-width</element>
-      <element>light-text-tile</element>
+      <element>tile-light-text</element>
+      <element remove="True">light-text-tile</element>
     </value>
   </record>
 
@@ -21,7 +22,7 @@
 
   <records interface="plone.app.mosaic.interfaces.IFormat"
            prefix="plone.app.mosaic.formats.tile_text_light">
-    <value key="name">light-text-tile</value>
+    <value key="name">tile-light-text</value>
     <value key="category">tile</value>
     <value key="label">Light Color Text</value>
     <value key="action">tile-toggle-class</value>
@@ -71,8 +72,8 @@
       <element>jazkarta-tesserae</element>
     </value>
     <value key="enabled">True</value>
-    <value key="csscompilation">++plone++jazkarta.tesserae/styles.css</value>
-    <value key="jscompilation">++plone++jazkarta.tesserae/scripts-compiled.js</value>
+    <value key="csscompilation">++plone++jazkarta.tesserae/jazkarta-tesserae-compiled.css</value>
+    <value key="jscompilation">++plone++jazkarta.tesserae/jazkarta-tesserae-compiled.js</value>
     <value key="stub_js_modules">
       <element>jquery</element>
     </value>
