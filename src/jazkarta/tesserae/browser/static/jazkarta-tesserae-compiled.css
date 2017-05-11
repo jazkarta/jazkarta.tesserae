@@ -3635,11 +3635,13 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
   content: '\e810';
 }
 /* line 22, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item {
+.carousel .item,
+#content carousel .item {
   height: auto;
 }
 /* line 24, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item .text-wrap {
+.carousel .item .text-wrap,
+#content carousel .item .text-wrap {
   height: 800px;
   display: table;
   width: 100%;
@@ -3650,7 +3652,8 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
   background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 75%);
 }
 /* line 33, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item .text-wrap .slide-text {
+.carousel .item .text-wrap .slide-text,
+#content carousel .item .text-wrap .slide-text {
   display: table-cell;
   vertical-align: middle;
   z-index: 10;
@@ -3658,38 +3661,45 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
   text-shadow: rgba(0, 0, 0, 0) 1px 1px 1px;
 }
 /* line 39, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item .text-wrap .slide-text a {
+.carousel .item .text-wrap .slide-text a,
+#content carousel .item .text-wrap .slide-text a {
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 /* line 42, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item .text-wrap .slide-text a:hover {
+.carousel .item .text-wrap .slide-text a:hover,
+#content carousel .item .text-wrap .slide-text a:hover {
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 /* line 48, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .text-wrap .slide-text .slide-lead,
-.carousel .item .text-wrap .slide-text .item .slide-sub-lead {
+#content carousel .item .text-wrap .slide-text .slide-lead,
+.carousel .item .text-wrap .slide-text .item .slide-sub-lead,
+#content carousel .item .text-wrap .slide-text .item .slide-sub-lead {
   color: #fff;
   margin: 0;
   padding: 0;
 }
 /* line 53, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item .text-wrap .slide-text .slide-lead {
+.carousel .item .text-wrap .slide-text .slide-lead,
+#content carousel .item .text-wrap .slide-text .slide-lead {
   font-weight: 500;
   font-size: 2.75rem;
   margin-bottom: 0;
 }
 /* line 58, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item .text-wrap .slide-text .slide-sub-lead {
+.carousel .item .text-wrap .slide-text .slide-sub-lead,
+#content carousel .item .text-wrap .slide-text .slide-sub-lead {
   font-weight: 400;
   font-size: 2.5rem;
   line-height: 42px;
   margin-top: 30px;
 }
 /* line 66, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item .carousel-caption {
+.carousel .item .carousel-caption,
+#content carousel .item .carousel-caption {
   pointer-events: none;
   padding: 0;
   bottom: auto;
@@ -3697,120 +3707,132 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
   transform: translateY(-50%);
 }
 /* line 68, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .item .carousel-caption a {
+.carousel .item .carousel-caption a,
+#content carousel .item .carousel-caption a {
   pointer-events: auto;
 }
 /* line 71, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .carousel-caption h3,
-.carousel .item .carousel-caption h4 {
+#content carousel .item .carousel-caption h3,
+.carousel .item .carousel-caption h4,
+#content carousel .item .carousel-caption h4 {
   color: #ffffff;
 }
 /* line 80, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel .carousel-indicators li {
+.carousel ol.carousel-indicators,
+#content carousel ol.carousel-indicators {
+  list-style-type: none;
+  margin: 0;
+}
+/* line 83, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+.carousel ol.carousel-indicators li,
+#content carousel ol.carousel-indicators li {
+  margin-bottom: 0;
+  line-height: initial;
+  display: inline-block;
   border: 2px solid #000000;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
 }
-/* line 84, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.carousel span.banner-img {
+/* line 91, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+.carousel span.banner-img,
+#content carousel span.banner-img {
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   width: 100%;
 }
-/* line 93, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+/* line 100, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .to-animate {
   opacity: 0;
 }
-/* line 97, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+/* line 104, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .background-image-tile {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-/* line 102, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+/* line 109, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .background-image-tile.parallax {
   background-attachment: fixed;
 }
-/* line 106, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+/* line 113, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .background-image-tile .colored-background {
   padding: 65px 0;
 }
-/* line 111, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+/* line 118, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .mosaic-tile-light-text {
   color: white;
 }
-/* line 113, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+/* line 120, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .mosaic-tile-light-text p {
   color: white;
 }
-/* line 118, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+/* line 125, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .mosaic-tile.mosaic-tile-full-width {
   margin-left: -15px;
   margin-right: -15px;
 }
 @media (min-width: 768px) {
-  /* line 121, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 128, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 720px / 2);
     margin-right: calc(-100vw / 2 + 720px / 2);
   }
 }
 @media (min-width: 992px) {
-  /* line 125, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 132, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 940px / 2);
     margin-right: calc(-100vw / 2 + 940px / 2);
   }
 }
 @media (min-width: 1200px) {
-  /* line 129, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 136, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 1140px / 2);
     margin-right: calc(-100vw / 2 + 1140px / 2);
   }
 }
 @media (min-width: 828px) {
-  /* line 134, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 141, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .plone-toolbar-left-default .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 780px / 2);
     margin-right: calc(-100vw / 2 + 780px / 2);
   }
 }
 @media (min-width: 1052px) {
-  /* line 138, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 145, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .plone-toolbar-left-default .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 1000px / 2);
     margin-right: calc(-100vw / 2 + 1000px / 2);
   }
 }
 @media (min-width: 1260px) {
-  /* line 142, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 149, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .plone-toolbar-left-default .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 1200px / 2);
     margin-right: calc(-100vw / 2 + 1200px / 2);
   }
 }
 @media (min-width: 888px) {
-  /* line 148, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 155, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .plone-toolbar-left-expanded .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 900px / 2);
     margin-right: calc(-100vw / 2 + 900px / 2);
   }
 }
 @media (min-width: 1112px) {
-  /* line 152, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 159, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .plone-toolbar-left-expanded .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 1060px / 2);
     margin-right: calc(-100vw / 2 + 1060px / 2);
   }
 }
 @media (min-width: 1320px) {
-  /* line 156, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
+  /* line 163, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
   .plone-toolbar-left-expanded .mosaic-tile.mosaic-tile-full-width {
     margin-left: calc(-100vw / 2 + 1260px / 2);
     margin-right: calc(-100vw / 2 + 1260px / 2);
   }
 }
-
-
