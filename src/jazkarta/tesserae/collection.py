@@ -13,8 +13,12 @@ class ICollectionSummaryTile(IContentSummaryTile):
         title=_(u'Select an existing collection'),
         required=True,
         source=CatalogSource(
-            object_provides='plone.app.contenttypes.behaviors.'
-                            'collection.ISyndicatableCollection'),
+            object_provides=(
+                'plone.app.contenttypes.behaviors.collection'
+                '.ISyndicatableCollection',
+                'plone.app.collection.interfaces.ICollection',
+            )
+        ),
     )
 
     show_title = schema.Bool(
@@ -56,7 +60,7 @@ class CollectionSummaryTile(ContentSummaryTile):
         self.show_title = self.data.get('show_title', False)
         limit = self.data.get('limit', 3)
         self.results = []
-        for b in self.content.results(limit=limit):
+        for b in self.content.results(batch=False, b_size=limit)[:limit]:
             try:
                 obj = b.getObject()
                 self.results.append(obj)

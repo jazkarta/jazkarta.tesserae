@@ -22,7 +22,7 @@
             <div class="cardDate" tal:condition="start">
                 ${python:toLocalizedTime(start)}
             </div>
-            <div class="cardDate" tal:condition="python:view.show_date and effective and not start" tal:define="effective content/effective|nothing">
+            <div class="cardDate" tal:condition="python:view.show_date and effective and not start" tal:define="effective content/EffectiveDate|nothing">
                 ${python:toLocalizedTime(effective)}
             </div>
             <h4 class="cardTitle"><a href="${url}" title="${title}">${title}</a></h4>

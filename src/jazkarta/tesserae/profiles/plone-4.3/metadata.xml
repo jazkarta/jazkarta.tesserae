@@ -4,5 +4,6 @@
   <dependencies>
     <dependency>profile-plone.app.mosaic:default</dependency>
     <dependency>profile-plone.app.imagecropping:default</dependency>
+    <dependency>profile-jazkarta.tesserae:common</dependency>
   </dependencies>
 </metadata>

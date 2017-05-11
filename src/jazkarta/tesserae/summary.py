@@ -51,7 +51,7 @@ class ContentSummaryTile(Tile):
     @memoize
     def content(self):
         uuid = self.data.get('content_uid')
-        if uuid != api.content.get_uuid(self.context, None):
+        if uuid != api.content.get_uuid(self.context):
             try:
                 item = uuidToObject(uuid)
             except Unauthorized:
