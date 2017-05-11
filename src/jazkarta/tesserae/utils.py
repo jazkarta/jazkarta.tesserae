@@ -1,4 +1,6 @@
 """Utility classes and functions"""
+from plone import api
+from Products.CMFCore.utils import getToolByName
 
 _marker = object()
 
@@ -26,3 +28,36 @@ class PrefixedFieldProperty(object):
             raise ValueError(self.__name__, 'field is readonly')
 
         setattr(inst.context, self.attribute_name, value)
+
+
+def uuidToCatalogBrainUnrestricted(uuid):
+    """Given a UUID, attempt to return a catalog brain even when the object is
+    not visible for the logged in user (e.g. during anonymous traversal)
+    """
+
+    site = api.portal.get()
+    if site is None:
+        return None
+
+    catalog = getToolByName(site, 'portal_catalog', None)
+    if catalog is None:
+        return None
+
+    result = catalog.unrestrictedSearchResults(UID=uuid)
+    if len(result) != 1:
+        return None
+
+    return result[0]
+
+
+def uuidToObject(uuid):
+    """Given a UUID, attempt to return a content object. Will return
+    None if the UUID can't be found. Raises Unauthorized if the current
+    user is not allowed to access the object.
+    """
+
+    brain = uuidToCatalogBrainUnrestricted(uuid)
+    if brain is None:
+        return None
+
+    return brain.getObject()

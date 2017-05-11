@@ -1,33 +1,33 @@
-from plone.app.standardtiles.existingcontent import uuidToObject
 from plone.app.standardtiles.existingcontent import CatalogSource
 from plone.memoize.view import memoize
 from plone.tiles import Tile
 from plone.supermodel import model
-from plone.uuid.interfaces import IUUID
+from plone import api
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zExceptions import Unauthorized
 from zope import schema
 from .config import IMAGE_NAMES
+from .utils import uuidToObject
 from . import _
 
 
 class IContentSummaryTile(model.Schema):
 
     content_uid = schema.Choice(
-        title=_(u"Select an existing content item"),
+        title=_(u'Select an existing content item'),
         required=True,
         source=CatalogSource(),
     )
 
     show_description = schema.Bool(
-        title=_(u"Show content description"),
+        title=_(u'Show content description'),
         default=False,
     )
 
     show_date = schema.Bool(
-        title=_(u"Show publication date"),
-        description=_(u"Include the publication date in the "
-                      u"summary (events will always include the start date)"),
+        title=_(u'Show publication date'),
+        description=_(u'Include the publication date in the '
+                      u'summary (events will always include the start date)'),
         default=False,
     )
 
@@ -51,7 +51,7 @@ class ContentSummaryTile(Tile):
     @memoize
     def content(self):
         uuid = self.data.get('content_uid')
-        if uuid != IUUID(self.context, None):
+        if uuid != api.content.get_uuid(self.context, None):
             try:
                 item = uuidToObject(uuid)
             except Unauthorized:

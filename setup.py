@@ -42,6 +42,7 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'setuptools',
         'z3c.jbot',
+        'plone.app.dexterity',
         'plone.app.mosaic',
         'plone.app.imagecropping',
             # when used with Plone 5.0 make sure to use
@@ -49,6 +50,7 @@ setup(
             # when used with Plone 5.1 pin plone.app.imagecropping to >= 2.0.1
         'five.grok',
         'plone.directives.form',
+        'five.pt',
     ],
     extras_require={
         'test': [

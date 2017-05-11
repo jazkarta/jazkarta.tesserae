@@ -3,6 +3,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="jazkarta.tesserae">
 
   <i18n:registerTranslations directory="locales" />
@@ -12,10 +13,30 @@
   <include package=".browser" />
 
   <genericsetup:registerProfile
-      name="default"
+      name="common"
       title="jazkarta.tesserae"
       directory="profiles/default"
-      description="Installs jazkarta.tesserae mosaic tiles and styles."
+      description="Installs common jazkarta.tesserae mosaic tiles and styles."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      zcml:condition="not-have plone-5"
+      name="default"
+      title="jazkarta.tesserae"
+      directory="profiles/plone-4.3"
+      description="Installs jazkarta.tesserae mosaic tiles and styles for Plone 4.3."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      zcml:condition="have plone-5"
+      name="default"
+      title="jazkarta.tesserae"
+      directory="profiles/plone-5.x"
+      description="Installs jazkarta.tesserae mosaic tiles and styles for Plone 5.x."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
       />

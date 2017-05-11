@@ -10,32 +10,32 @@ from . import _
 class ICollectionSummaryTile(IContentSummaryTile):
 
     content_uid = schema.Choice(
-        title=_(u"Select an existing collection"),
+        title=_(u'Select an existing collection'),
         required=True,
         source=CatalogSource(
-            object_provides='plone.app.contenttypes.behaviors.collection.ISyndicatableCollection'
-        ),
+            object_provides='plone.app.contenttypes.behaviors.'
+                            'collection.ISyndicatableCollection'),
     )
 
     show_title = schema.Bool(
-        title=_(u"Show collection title"),
+        title=_(u'Show collection title'),
         default=True,
     )
 
     limit = schema.Int(
-        title=_(u"Number of items to display"),
+        title=_(u'Number of items to display'),
         default=3,
         min=1,
     )
 
     show_description = schema.Bool(
-        title=_(u"Show description of result items"),
+        title=_(u'Show description of result items'),
         default=True,
     )
 
     show_date = schema.Bool(
-        title=_(u"Show publication date of result items"),
-        description=_(u"Events will always include start date"),
+        title=_(u'Show publication date of result items'),
+        description=_(u'Events will always include start date'),
         default=True,
     )
 

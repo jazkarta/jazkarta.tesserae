@@ -1,7 +1,7 @@
 import json
 from Products.Five import BrowserView
 from plone.directives import form
-from plone.app.standardtiles.existingcontent import uuidToCatalogBrainUnrestricted
+from ..utils import uuidToCatalogBrainUnrestricted
 from ..slider import ISliderConfig
 from .. import _
 
@@ -53,5 +53,5 @@ class SliderView(BrowserView):
 
 class SliderConfig(form.SchemaEditForm):
     """Edit form for slider configuration"""
-    label = _(u"Edit Slider Configuration")
+    label = _(u'Edit Slider Configuration')
     schema = ISliderConfig

@@ -4,6 +4,7 @@
   <record name="plone.app.mosaic.default_available_actions">
     <value purge="False">
       <element remove="True">tile-full-width</element>
+      <element remove="True">tile-light-text</element>
     </value>
   </record>
 
@@ -11,13 +12,10 @@
            prefix="plone.app.mosaic.formats.tile_full_width" remove="True">
   </records>
 
-  <records
-      interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
-      prefix="plone">
-    <value key="allowed_sizes" purge="false">
-      <element remove="True">banner 2400:1600</element>
-    </value>
+  <records interface="plone.app.mosaic.interfaces.IFormat"
+           prefix="plone.app.mosaic.formats.tile_light_text" remove="True">
   </records>
+
   <records prefix="plone.resources/jazkarta-tesserae-mosaic"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'
            remove="True">

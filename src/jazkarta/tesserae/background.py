@@ -18,8 +18,9 @@ class IBackgroundImageTile(model.Schema):
     )
 
     background_color = schema.TextLine(
-        title=_(u"Enter a CSS color value to use as a background"),
-        description=_(u"This will be overlayed on top of the background image"),
+        title=_(u'Enter a CSS color value to use as a background'),
+        description=_(u'This will be overlayed on top of the background '
+                      u'image'),
         required=False,
     )
 
@@ -36,7 +37,7 @@ class IBackgroundImageTile(model.Schema):
     )
 
     content = RichText(
-        title=_(u"HTML"),
+        title=_(u'HTML'),
         required=True
     )
 
@@ -59,7 +60,8 @@ class BackgroundImageTile(PersistentTile):
 
     def image_url(self):
         scale_name = self.data.get('scale', 'banner')
-        images_view = queryMultiAdapter((self, self.context.REQUEST), name=u'images')
+        images_view = queryMultiAdapter((self, self.context.REQUEST),
+                                        name=u'images')
         if images_view is not None:
             try:
                 scale = images_view.scale(fieldname='image', scale=scale_name)

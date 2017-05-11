@@ -1,5 +1,11 @@
-from plone.app.contenttypes.interfaces import IImage
-from plone.app.z3cform.widget import RelatedItemsWidget
+try:
+    from plone.app.contenttypes.interfaces import IImage
+except ImportError:
+    from zope.interface import Interface as IImage
+try:
+    from plone.app.z3cform.widget import RelatedItemsWidget
+except ImportError:
+    from plone.app.widgets.dx import RelatedItemsWidget
 from plone.autoform import directives
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.namedfile.field import NamedBlobImage
@@ -16,14 +22,14 @@ class ISliderImage(model.Schema, IImage):
     """Slider slide/image content type"""
 
     image = NamedBlobImage(
-        title=_(u"Image"),
+        title=_(u'Image'),
         required=True,
     )
 
     content = schema.TextLine(
-        title=_(u"Internal Content Link"),
-        description=_(u"Select content for this slide to link to or enter an "
-                      u"external link below."),
+        title=_(u'Internal Content Link'),
+        description=_(u'Select content for this slide to link to or enter an '
+                      u'external link below.'),
         required=False
     )
     directives.widget(
@@ -36,15 +42,16 @@ class ISliderImage(model.Schema, IImage):
     )
 
     link = schema.URI(
-        title=_(u"External Link"),
+        title=_(u'External Link'),
         required=False
     )
 
     @invariant
     def validateReferenceOrLink(data):
         if not data.content and not data.link:
-            raise Invalid(_(u"You must enter either a content item or "
-                            u"an external link"))
+            raise Invalid(_(u'You must enter either a content item or '
+                            u'an external link'))
+
 
 alsoProvides(ISliderImage, IFormFieldProvider)
 
@@ -53,32 +60,32 @@ class ISliderConfig(model.Schema):
     """Configuration for a slider folder"""
 
     height = schema.Int(
-        title=_(u"Slider height (in px)"),
-        description=_(u"Optionally constrain slider height with center crop, "
-                      u"leave blank to use image height (all slides must have "
-                      u"the same aspect ratio if no height is set)."),
+        title=_(u'Slider height (in px)'),
+        description=_(u'Optionally constrain slider height with center crop, '
+                      u'leave blank to use image height (all slides must have '
+                      u'the same aspect ratio if no height is set).'),
         required=False
     )
 
     interval = schema.Int(
-        title=_(u"Carousel interval"),
-        description=_(u"Delay in ms between changing slides. Leave blank to "
-                      u"never auto-cycle."),
+        title=_(u'Carousel interval'),
+        description=_(u'Delay in ms between changing slides. Leave blank to '
+                      u'never auto-cycle.'),
         required=False,
         default=5000,
     )
 
     pause = schema.Bool(
-        title=_(u"Pause on hover?"),
-        description=_(u"Should the slider auto-cycle pause when the mouse is "
-                      u"hovering over it?"),
+        title=_(u'Pause on hover?'),
+        description=_(u'Should the slider auto-cycle pause when the mouse is '
+                      u'hovering over it?'),
         default=True,
     )
 
     wrap = schema.Bool(
-        title=_(u"Wrap?"),
-        description=_(u"Should the slider wrap from from the last side to the "
-                      u"first?"),
+        title=_(u'Wrap?'),
+        description=_(u'Should the slider wrap from from the last side to the '
+                      u'first?'),
         default=True,
     )
 

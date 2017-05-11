@@ -5,7 +5,6 @@
     <value purge="False">
       <element>tile-full-width</element>
       <element>tile-light-text</element>
-      <element remove="True">light-text-tile</element>
     </value>
   </record>
 
@@ -21,7 +20,7 @@
   </records>
 
   <records interface="plone.app.mosaic.interfaces.IFormat"
-           prefix="plone.app.mosaic.formats.tile_text_light">
+           prefix="plone.app.mosaic.formats.tile_light_text">
     <value key="name">tile-light-text</value>
     <value key="category">tile</value>
     <value key="label">Light Color Text</value>
@@ -29,55 +28,6 @@
     <value key="icon">false</value>
     <value key="favorite">false</value>
     <value key="weight">110</value>
-  </records>
-
-  <records
-      interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
-      prefix="plone">
-    <value key="allowed_sizes" purge="false">
-      <element>banner 2400:1600</element>
-    </value>
-  </records>
-
-  <records prefix="plone.resources/bootstrap-carousel"
-           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="css">
-      <element>++plone++jazkarta.tesserae/bs-carousel.less</element>
-    </value>
-    <value key="js">++plone++static/components/bootstrap/js/carousel.js</value>
-    <value key="deps">jquery</value>
-    <value key="export">window.jQuery.carousel</value>
-  </records>
-
-  <records prefix="plone.resources/jazkarta-tesserae-mosaic"
-           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="css">
-      <element>++plone++jazkarta.tesserae/mosaic-fixes.less</element>
-    </value>
-  </records>
-
-  <records prefix="plone.resources/jazkarta-tesserae"
-           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="css">
-      <element>++plone++jazkarta.tesserae/styles.less</element>
-    </value>
-    <value key="js">++plone++jazkarta.tesserae/scripts.js</value>
-  </records>
-
-  <records prefix="plone.bundles/jazkarta-tesserae"
-            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-    <value key="resources">
-      <element>bootstrap-transition</element>
-      <element>bootstrap-carousel</element>
-      <element>jazkarta-tesserae</element>
-    </value>
-    <value key="enabled">True</value>
-    <value key="csscompilation">++plone++jazkarta.tesserae/jazkarta-tesserae-compiled.css</value>
-    <value key="jscompilation">++plone++jazkarta.tesserae/jazkarta-tesserae-compiled.js</value>
-    <value key="stub_js_modules">
-      <element>jquery</element>
-    </value>
-    <value key="depends">plone</value>
   </records>
 
   <record name="plone.app.tiles">
