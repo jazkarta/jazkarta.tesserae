@@ -1,6 +1,6 @@
 from plone.app.textfield import RichText
 from plone.autoform.directives import widget
-from plone.namedfile.field import NamedBlobFile
+from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from plone.tiles import PersistentTile
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -12,7 +12,7 @@ from . import _
 
 class IBackgroundImageTile(model.Schema):
 
-    image = NamedBlobFile(
+    image = NamedBlobImage(
         title=_(u'Upload an image to use as background'),
         required=False,
     )

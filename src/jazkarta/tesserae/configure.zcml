@@ -13,18 +13,9 @@
   <include package=".browser" />
 
   <genericsetup:registerProfile
-      name="common"
-      title="jazkarta.tesserae"
-      directory="profiles/default"
-      description="Installs common jazkarta.tesserae mosaic tiles and styles."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
-      />
-
-  <genericsetup:registerProfile
       zcml:condition="not-have plone-5"
       name="default"
-      title="jazkarta.tesserae"
+      title="jazkarta.tesserae (Plone 4.3)"
       directory="profiles/plone-4.3"
       description="Installs jazkarta.tesserae mosaic tiles and styles for Plone 4.3."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -34,9 +25,18 @@
   <genericsetup:registerProfile
       zcml:condition="have plone-5"
       name="default"
-      title="jazkarta.tesserae"
+      title="jazkarta.tesserae (Plone 5)"
       directory="profiles/plone-5.x"
       description="Installs jazkarta.tesserae mosaic tiles and styles for Plone 5.x."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="common"
+      title="jazkarta.tesserae (Common)"
+      directory="profiles/common"
+      description="Installs common jazkarta.tesserae mosaic tiles and styles."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
       />
