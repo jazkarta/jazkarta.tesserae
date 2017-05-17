@@ -3765,7 +3765,12 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
   color: white;
 }
 /* line 120, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
-.mosaic-tile-light-text p {
+.mosaic-tile-light-text p,
+.mosaic-tile-light-text h2,
+.mosaic-tile-light-text h3,
+.mosaic-tile-light-text h4,
+.mosaic-tile-light-text h5,
+.mosaic-tile-light-text h6 {
   color: white;
 }
 /* line 125, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
