@@ -48,6 +48,11 @@ Install jazkarta.tesserae by adding it to your buildout::
 
 and then running ``bin/buildout``
 
+On Plone 4.3 an additional version pin for plone.app.vocabularies is required:
+
+    [versions]
+    plone.app.vocabularies = 2.1.24
+
 
 Contribute
 ----------
