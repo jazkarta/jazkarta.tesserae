@@ -16,9 +16,11 @@
             <h2 class="cardsTitle"><a href="${url}" title="${description}">${title}</a></h2>
             <a class="viewAll" href="${url}" title="${title}">View All</a>
         </div>
+        <div class="cardContainer">
         <tal:results repeat="content results">
             <metal:content use-macro="nocall:view/macro" />
         </tal:results>
+        </div>
     </div>
   </body>
 </html>
