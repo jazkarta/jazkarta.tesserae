@@ -18,9 +18,12 @@
                 <img alt="${title}" src="${image_url}" />
             </a>
         </div>
-        <div class="cardBottom" tal:define="start content/start|nothing">
+        <div class="cardBottom" tal:define="start content/start|nothing;end content/end|nothing">
             <div class="cardDate" tal:condition="start">
                 ${python:toLocalizedTime(start)}
+                <span tal:condition="python:end and end != start">
+                    - ${python:toLocalizedTime(end)}
+                </span>
             </div>
             <div class="cardDate" tal:condition="python:view.show_date and effective and not start" tal:define="effective content/EffectiveDate|nothing">
                 ${python:toLocalizedTime(effective)}
