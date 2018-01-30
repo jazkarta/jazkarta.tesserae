@@ -31,6 +31,12 @@ class IContentSummaryTile(model.Schema):
         default=False,
     )
 
+    style = schema.Choice(
+        title=_(u'Select the display orientation'),
+        default=u'landscape',
+        values=(u'landscape', u'portrait'),
+    )
+
 
 class ContentSummaryTile(Tile):
     """Existing content tile
@@ -77,3 +83,7 @@ class ContentSummaryTile(Tile):
                 continue
             if scale is not None:
                 return scale.url
+
+    @property
+    def orientation(self):
+        return self.data.get('style', 'landscape')
