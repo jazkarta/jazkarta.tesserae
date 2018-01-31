@@ -14,13 +14,13 @@
                              toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
     <div class="card" tal:condition="nocall:content">
         <div tal:condition="image_url"
-             tal:attributes="class python:view.orientation == 'landscape' and 'cardTop' or 'cardLeft'">
+             tal:attributes="class python:view.orientation == 'portrait' and 'cardLeft' or 'cardTop'">
             <a href="${url}" title="${title}">
                 <img alt="${title}" src="${image_url}" />
             </a>
         </div>
         <div tal:define="start content/start|nothing;end content/end|nothing"
-             tal:attributes="class python:view.orientation == 'landscape' and 'cardBottom' or 'cardRight'">
+             tal:attributes="class python:view.orientation == 'portrait' and 'cardRight' or 'cardBottom'">
             <div class="cardDate" tal:condition="start">
                 ${python:toLocalizedTime(start)}
                 <span tal:condition="python:end and end != start">
