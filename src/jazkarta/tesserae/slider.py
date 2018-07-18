@@ -109,6 +109,7 @@ class SliderConfigAdapter(object):
     interval = PrefixedFieldProperty(ISliderConfig['interval'], STORAGE_PREFIX)
     wrap = PrefixedFieldProperty(ISliderConfig['wrap'], STORAGE_PREFIX)
     pause = PrefixedFieldProperty(ISliderConfig['pause'], STORAGE_PREFIX)
+    scale = PrefixedFieldProperty(ISliderConfig['scale'], STORAGE_PREFIX)
 
     def __init__(self, context):
         self.context = context
