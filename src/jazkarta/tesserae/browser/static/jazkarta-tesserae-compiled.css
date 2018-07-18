@@ -31,9 +31,9 @@
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective: 1000px;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
   }
   /* line 34, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
   .carousel-inner > .item.next,
@@ -109,9 +109,8 @@
   color: #ffffff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: rgba(0, 0, 0, 0);
 }
-/* line 109, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 108, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control.left {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
@@ -119,7 +118,7 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
-/* line 112, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 111, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control.right {
   left: auto;
   right: 0;
@@ -129,7 +128,7 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
-/* line 119, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 118, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control:hover,
 .carousel-control:focus {
   outline: 0;
@@ -138,46 +137,46 @@
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-/* line 128, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 127, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-left,
 .carousel-control .glyphicon-chevron-right {
   position: absolute;
   top: 50%;
-  margin-top: -10px;
   z-index: 5;
   display: inline-block;
 }
-/* line 138, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 136, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
   left: 50%;
   margin-left: -10px;
 }
-/* line 143, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 141, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-right {
   right: 50%;
   margin-right: -10px;
 }
-/* line 148, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 146, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
   width: 20px;
   height: 20px;
+  margin-top: -10px;
   line-height: 1;
   font-family: serif;
 }
-/* line 158, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 157, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control .icon-prev:before {
   content: '\2039';
 }
-/* line 163, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 162, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-control .icon-next:before {
   content: '\203a';
 }
-/* line 174, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 173, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
@@ -189,7 +188,7 @@
   list-style: none;
   text-align: center;
 }
-/* line 185, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 184, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-indicators li {
   display: inline-block;
   width: 10px;
@@ -202,14 +201,14 @@
   background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
 }
-/* line 207, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 206, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-indicators .active {
   margin: 0;
   width: 12px;
   height: 12px;
   background-color: #ffffff;
 }
-/* line 218, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 217, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-caption {
   position: absolute;
   left: 15%;
@@ -222,38 +221,38 @@
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-/* line 229, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+/* line 228, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
 .carousel-caption .btn {
   text-shadow: none;
 }
 @media screen and (min-width: 768px) {
-  /* line 240, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+  /* line 239, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-prev,
   .carousel-control .icon-next {
     width: 30px;
     height: 30px;
-    margin-top: -10px;
+    margin-top: -15px;
     font-size: 30px;
   }
-  /* line 249, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+  /* line 248, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
-    margin-left: -10px;
+    margin-left: -15px;
   }
-  /* line 253, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+  /* line 252, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
-    margin-right: -10px;
+    margin-right: -15px;
   }
-  /* line 260, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+  /* line 259, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
   .carousel-caption {
     left: 20%;
     right: 20%;
     padding-bottom: 30px;
   }
-  /* line 267, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
+  /* line 266, http://localhost:8080/Plone/++plone++static/components/bootstrap/less/carousel.less */
   .carousel-indicators {
     bottom: 20px;
   }
@@ -3636,12 +3635,12 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
 }
 /* line 22, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item,
-#content carousel .item {
+#content .carousel .item {
   height: auto;
 }
 /* line 24, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .text-wrap,
-#content carousel .item .text-wrap {
+#content .carousel .item .text-wrap {
   height: 800px;
   display: table;
   width: 100%;
@@ -3653,7 +3652,7 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
 }
 /* line 33, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .text-wrap .slide-text,
-#content carousel .item .text-wrap .slide-text {
+#content .carousel .item .text-wrap .slide-text {
   display: table-cell;
   vertical-align: middle;
   z-index: 10;
@@ -3662,36 +3661,36 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
 }
 /* line 39, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .text-wrap .slide-text a,
-#content carousel .item .text-wrap .slide-text a {
+#content .carousel .item .text-wrap .slide-text a {
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 /* line 42, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .text-wrap .slide-text a:hover,
-#content carousel .item .text-wrap .slide-text a:hover {
+#content .carousel .item .text-wrap .slide-text a:hover {
   text-decoration: none;
   color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 /* line 48, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .text-wrap .slide-text .slide-lead,
-#content carousel .item .text-wrap .slide-text .slide-lead,
+#content .carousel .item .text-wrap .slide-text .slide-lead,
 .carousel .item .text-wrap .slide-text .item .slide-sub-lead,
-#content carousel .item .text-wrap .slide-text .item .slide-sub-lead {
+#content .carousel .item .text-wrap .slide-text .item .slide-sub-lead {
   color: #fff;
   margin: 0;
   padding: 0;
 }
 /* line 53, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .text-wrap .slide-text .slide-lead,
-#content carousel .item .text-wrap .slide-text .slide-lead {
+#content .carousel .item .text-wrap .slide-text .slide-lead {
   font-weight: 500;
   font-size: 2.75rem;
   margin-bottom: 0;
 }
 /* line 58, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .text-wrap .slide-text .slide-sub-lead,
-#content carousel .item .text-wrap .slide-text .slide-sub-lead {
+#content .carousel .item .text-wrap .slide-text .slide-sub-lead {
   font-weight: 400;
   font-size: 2.5rem;
   line-height: 42px;
@@ -3699,7 +3698,7 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
 }
 /* line 66, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .carousel-caption,
-#content carousel .item .carousel-caption {
+#content .carousel .item .carousel-caption {
   pointer-events: none;
   padding: 0;
   bottom: auto;
@@ -3708,25 +3707,25 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
 }
 /* line 68, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .carousel-caption a,
-#content carousel .item .carousel-caption a {
+#content .carousel .item .carousel-caption a {
   pointer-events: auto;
 }
 /* line 71, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel .item .carousel-caption h3,
-#content carousel .item .carousel-caption h3,
+#content .carousel .item .carousel-caption h3,
 .carousel .item .carousel-caption h4,
-#content carousel .item .carousel-caption h4 {
+#content .carousel .item .carousel-caption h4 {
   color: #ffffff;
 }
 /* line 80, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel ol.carousel-indicators,
-#content carousel ol.carousel-indicators {
+#content .carousel ol.carousel-indicators {
   list-style-type: none;
   margin: 0;
 }
 /* line 83, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel ol.carousel-indicators li,
-#content carousel ol.carousel-indicators li {
+#content .carousel ol.carousel-indicators li {
   margin-bottom: 0;
   line-height: initial;
   display: inline-block;
@@ -3735,7 +3734,7 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
 }
 /* line 91, http://localhost:8080/Plone/++plone++jazkarta.tesserae/styles.less */
 .carousel span.banner-img,
-#content carousel span.banner-img {
+#content .carousel span.banner-img {
   display: block;
   background-repeat: no-repeat;
   background-size: cover;

@@ -89,6 +89,14 @@ class ISliderConfig(model.Schema):
         default=True,
     )
 
+    scale = schema.Choice(
+        title=_(u'Image Scale'),
+        description=_(u'Which image scale should this slider use?'),
+        vocabulary=u'plone.app.vocabularies.ImagesScales',
+        default=u'banner',
+        required=True,
+    )
+
 
 STORAGE_PREFIX = '_tesserae_slider_'
 

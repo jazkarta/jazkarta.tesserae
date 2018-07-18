@@ -10,11 +10,13 @@ class SliderView(BrowserView):
     """Folder view for slider images"""
     height = None
     slider_config = ''
+    scale = 'banner'
 
     def listing(self):
         config = ISliderConfig(self.context, alternate=None)
         if config:
             self.height = config.height
+            self.scale = getattr(config, 'scale', None) or 'banner'
             slider_config = {
                 'interval': config.interval,
                 'wrap': config.wrap,
@@ -41,7 +43,7 @@ class SliderView(BrowserView):
             item['title'] = obj.title
             item['description'] = obj.description
             images_view = obj.unrestrictedTraverse('@@images')
-            scale = images_view.scale(fieldname='image', scale='banner')
+            scale = images_view.scale(fieldname='image', scale=self.scale)
             if scale is not None:
                 item['image_url'] = scale.url
             items.append(item)
