@@ -68,6 +68,16 @@
       import_steps="plone.app.registry"
       />
 
+  <genericsetup:upgradeDepends
+      zcml:condition="not-have plone-5"
+      title="Update js permissions"
+      sortkey="2"
+      source="1001"
+      destination="1002"
+      profile="jazkarta.tesserae:default"
+      import_steps="jsregistry"
+      />
+
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="jazkarta.tesserae-hiddenprofiles" />
