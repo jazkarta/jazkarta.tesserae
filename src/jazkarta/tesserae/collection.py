@@ -1,4 +1,4 @@
-from plone.app.standardtiles.existingcontent import CatalogSource
+from plone.app.vocabularies.catalog import CatalogSource
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zExceptions import Unauthorized
 from zope import schema

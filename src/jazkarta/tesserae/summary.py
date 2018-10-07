@@ -1,4 +1,4 @@
-from plone.app.standardtiles.existingcontent import CatalogSource
+from plone.app.vocabularies.catalog import CatalogSource
 from plone.memoize.view import memoize
 from plone.tiles import Tile
 from plone.supermodel import model
