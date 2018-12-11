@@ -1,5 +1,10 @@
 from plone.app.vocabularies.catalog import CatalogSource
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+try:
+    from plone.app.widgets.dx import RelatedItemsWidget
+    from plone.directives import form
+except ImportError:
+    RelatedItemsWidget = None
 from zExceptions import Unauthorized
 from zope import schema
 from .summary import ContentSummaryTile
@@ -20,6 +25,8 @@ class ICollectionSummaryTile(IContentSummaryTile):
             )
         ),
     )
+    if RelatedItemsWidget is not None:
+        form.widget('content_uid', RelatedItemsWidget)
 
     show_title = schema.Bool(
         title=_(u'Show collection title'),

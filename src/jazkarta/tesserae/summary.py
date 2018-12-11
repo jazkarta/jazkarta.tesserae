@@ -1,4 +1,9 @@
 from plone.app.vocabularies.catalog import CatalogSource
+try:
+    from plone.app.widgets.dx import RelatedItemsWidget
+    from plone.directives import form
+except ImportError:
+    RelatedItemsWidget = None
 from plone.memoize.view import memoize
 from plone.tiles import Tile
 from plone.supermodel import model
@@ -18,6 +23,8 @@ class IContentSummaryTile(model.Schema):
         required=True,
         source=CatalogSource(),
     )
+    if RelatedItemsWidget is not None:
+        form.widget('content_uid', RelatedItemsWidget)
 
     show_description = schema.Bool(
         title=_(u'Show content description'),
