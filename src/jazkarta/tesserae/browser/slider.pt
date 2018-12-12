@@ -50,11 +50,18 @@
             <span class="icon-next"></span>
           </a>
           <script>
-            require(['jazkarta-tesserae'], function () {
-              $(function () {
-                $('#${c_id}').carousel(${view/slider_config});
+            try {
+              require(['jazkarta-tesserae'], function () {
+                $(function () {
+                  $('#${c_id}').carousel(${view/slider_config});
+                });
               });
-            });
+            } catch(error) {
+              if (window.console !== undefined) {
+                console.log('Error instantiating carousel');
+                console.error(error);
+              }
+            }
           </script>
         </div>
       </metal:slider>
