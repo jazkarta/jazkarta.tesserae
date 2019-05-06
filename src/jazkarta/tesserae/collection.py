@@ -2,7 +2,7 @@ from plone.app.vocabularies.catalog import CatalogSource
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 try:
     from plone.app.widgets.dx import RelatedItemsWidget
-    from plone.directives import form
+    from plone.autoform import directives as form
 except ImportError:
     RelatedItemsWidget = None
 from zExceptions import Unauthorized

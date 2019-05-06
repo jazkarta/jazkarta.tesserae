@@ -6,7 +6,7 @@ try:
     from plone.app.z3cform.widget import RelatedItemsWidget
 except ImportError:
     from plone.app.widgets.dx import RelatedItemsWidget
-from plone.autoform import directives
+from plone.autoform import directives as form
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
@@ -32,11 +32,10 @@ class ISliderImage(model.Schema, IImage):
                       u'external link below.'),
         required=False
     )
-    directives.widget(
+    form.widget(
         'content',
         RelatedItemsWidget,
         pattern_options={
-            'basePath': None,
             'placeholder': _(u'Begin typing a title'),
         }
     )

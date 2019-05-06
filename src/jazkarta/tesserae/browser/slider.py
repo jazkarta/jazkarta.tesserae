@@ -1,6 +1,7 @@
 import json
 from Products.Five import BrowserView
-from plone.directives import form
+from plone.autoform.form import AutoExtensibleForm
+from z3c.form import form
 from ..utils import uuidToCatalogBrainUnrestricted
 from ..slider import ISliderConfig
 from .. import _
@@ -53,7 +54,7 @@ class SliderView(BrowserView):
         return 'carousel-' + self.context.getId()
 
 
-class SliderConfig(form.SchemaEditForm):
+class SliderConfig(AutoExtensibleForm, form.EditForm):
     """Edit form for slider configuration"""
     label = _(u'Edit Slider Configuration')
     schema = ISliderConfig

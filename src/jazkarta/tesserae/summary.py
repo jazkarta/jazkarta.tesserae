@@ -1,7 +1,7 @@
 from plone.app.vocabularies.catalog import CatalogSource
 try:
     from plone.app.widgets.dx import RelatedItemsWidget
-    from plone.directives import form
+    from plone.autoform import directives as form
 except ImportError:
     RelatedItemsWidget = None
 from plone.memoize.view import memoize
