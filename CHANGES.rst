@@ -1,9 +1,8 @@
 Changelog
 =========
 
+1.0
+---
 
-1.0a1 (unreleased)
-------------------
-
-- Initial release.
+- Initial release, Python 3.7 and Plone 5.2 compatbility
   [alecm]
