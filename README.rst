@@ -14,15 +14,15 @@ Features
 --------
 
 - Slider image content type used as the basis for a simple bootstrap image
-carousel.
+  carousel.
 
 - Slider view and configuration for folders containing slider images
-(though it will also work with other image containing content). A
-folder with this view applied will appear as a slider when used within
-mosaic's existing content tile.
+  (though it will also work with other image containing content). A
+  folder with this view applied will appear as a slider when used within
+  mosaic's existing content tile.
 
 - A full width tile style, which causes a tile to expand past the bounds
-of the grid width to the full window width.
+  of the grid width to the full window width.
 
 
 Translations

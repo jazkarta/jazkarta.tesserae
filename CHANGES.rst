@@ -1,5 +1,11 @@
-Changelog
+CHANGELOG
 =========
+
+1.0.1
+-----
+
+- Documentation format fixes.
+  [alecm]
 
 1.0
 ---
