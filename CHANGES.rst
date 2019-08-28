@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+1.0.2
+-----
+
+- Fix for sites running ATCT.
+  [alecm]
+
 1.0.1
 -----
 
