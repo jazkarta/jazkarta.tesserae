@@ -38,7 +38,11 @@ class IBackgroundImageTile(model.Schema):
 
     content = RichText(
         title=_(u'HTML'),
-        required=True
+        required=True,
+        allowed_mime_types=('text/html',),
+        default_mime_type='text/html',
+        output_mime_type='text/x-html-safe',
+        default=u'',
     )
 
 
