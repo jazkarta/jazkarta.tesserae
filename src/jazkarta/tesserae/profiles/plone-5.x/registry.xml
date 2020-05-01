@@ -9,6 +9,7 @@
     </value>
   </records>
 
+
   <records prefix="plone.resources/bootstrap-carousel"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
     <value key="css">
@@ -37,8 +38,8 @@
   <records prefix="plone.bundles/jazkarta-tesserae"
             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
-      <element>bootstrap-transition</element>
       <element>bootstrap-carousel</element>
+      <element>jazkarta-tesserae-mosaic</element>
       <element>jazkarta-tesserae</element>
     </value>
     <value key="enabled">True</value>
@@ -47,6 +48,10 @@
     <value key="stub_js_modules">
       <element>jquery</element>
     </value>
+    <value key="compile">True</value>
+    <value key="enabled">True</value>
+    <value key="load_async">False</value>
+    <value key="load_defer">False</value>
     <value key="depends">plone</value>
   </records>
 

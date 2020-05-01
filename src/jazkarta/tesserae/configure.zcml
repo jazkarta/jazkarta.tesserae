@@ -78,6 +78,15 @@
       import_steps="jsregistry"
       />
 
+  <genericsetup:upgradeDepends
+      title="Add new row style and tile types"
+      sortkey="1"
+      source="1002"
+      destination="1003"
+      profile="jazkarta.tesserae:common"
+      import_steps="plone.app.registry"
+      />
+
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="jazkarta.tesserae-hiddenprofiles" />

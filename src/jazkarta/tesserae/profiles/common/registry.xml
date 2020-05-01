@@ -5,6 +5,7 @@
     <value purge="False">
       <element>tile-light-text</element>
       <element>tile-full-width</element>
+      <element>row-full-width</element>
     </value>
   </record>
 
@@ -25,6 +26,17 @@
     <value key="category">tile</value>
     <value key="label">Light Color Text</value>
     <value key="action">tile-toggle-class</value>
+    <value key="icon">false</value>
+    <value key="favorite">false</value>
+    <value key="weight">110</value>
+  </records>
+
+  <records interface="plone.app.mosaic.interfaces.IFormat"
+           prefix="plone.app.mosaic.formats.row_full_width">
+    <value key="name">row-full-width</value>
+    <value key="category">row</value>
+    <value key="label">Full Width Row</value>
+    <value key="action">row-toggle-class</value>
     <value key="icon">false</value>
     <value key="favorite">false</value>
     <value key="weight">110</value>
