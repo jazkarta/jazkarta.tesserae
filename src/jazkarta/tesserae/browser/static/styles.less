@@ -165,3 +165,60 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
     }
   }
 }
+
+.mosaic-grid-row {
+  &.mosaic-row-full-width {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    width: ~"calc(100% + 30px)" !important;
+    .mosaic-tile-full-width {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .mosaic-width-full .mosaic-tile-full-width {
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+    }
+  }
+}
+
+.mosaic-row-shrink {
+  .mosaic-width-quarter {
+      width: 25% !important;
+  }
+  .mosaic-width-third {
+      width: 33% !important;
+  }
+  .mosaic-width-half {
+      width: 50% !important;
+  }
+  .mosaic-grid-cell {
+      margin: 0;
+      float: left;
+  }
+}
+
+.mosaic-row-drop-last {
+  @media(max-width: (@plone-screen-sm-min - 1)) {
+      .mosaic-width-quarter {
+          width: 33% !important;
+      }
+      .mosaic-width-third {
+          width: 50% !important;
+      }
+      .mosaic-width-half {
+          width: 100% !important;
+      }
+      .mosaic-grid-cell {
+          margin: 0;
+          float: left;
+          &:last-child {
+              display: none;
+          }
+      }
+  }
+}

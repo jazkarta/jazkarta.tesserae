@@ -79,6 +79,16 @@
       />
 
   <genericsetup:upgradeDepends
+      zcml:condition="have plone-5"
+      title="Update resources"
+      sortkey="1"
+      source="1001"
+      destination="1002"
+      profile="jazkarta.tesserae:defualt"
+      import_steps="plone.app.registry"
+      />
+
+  <genericsetup:upgradeDepends
       title="Add new row style and tile types"
       sortkey="1"
       source="1002"

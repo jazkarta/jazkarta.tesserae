@@ -1,3 +1,23 @@
-@import '../++plone++static/components/bootstrap/less/mixins.less';
-@import '../++plone++static/components/bootstrap/less/variables.less';
-@import '../++plone++static/components/bootstrap/less/carousel.less';
+// Transitions
+.transition(@transition) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+.transition-delay(@transition-delay) {
+    -webkit-transition-delay: @transition-delay;
+        -moz-transition-delay: @transition-delay;
+            -o-transition-delay: @transition-delay;
+            transition-delay: @transition-delay;
+}
+.transition-duration(@transition-duration) {
+    -webkit-transition-duration: @transition-duration;
+        -moz-transition-duration: @transition-duration;
+            -o-transition-duration: @transition-duration;
+            transition-duration: @transition-duration;
+}
+
+@import 'https://raw.githubusercontent.com/plone/Products.CMFPlone/5.1.6/Products/CMFPlone/static/components/bootstrap/less/mixins.less';
+@import 'https://raw.githubusercontent.com/plone/Products.CMFPlone/5.1.6/Products/CMFPlone/static/components/bootstrap/less/variables.less';
+@import 'https://raw.githubusercontent.com/plone/Products.CMFPlone/5.1.6/Products/CMFPlone/static/components/bootstrap/less/carousel.less';

@@ -6,6 +6,8 @@
       <element>tile-light-text</element>
       <element>tile-full-width</element>
       <element>row-full-width</element>
+      <element>row-shrink</element>
+      <element>row-drop-last</element>
     </value>
   </record>
 
@@ -36,6 +38,28 @@
     <value key="name">row-full-width</value>
     <value key="category">row</value>
     <value key="label">Full Width Row</value>
+    <value key="action">row-toggle-class</value>
+    <value key="icon">false</value>
+    <value key="favorite">false</value>
+    <value key="weight">110</value>
+  </records>
+
+  <records interface="plone.app.mosaic.interfaces.IFormat"
+           prefix="plone.app.mosaic.formats.row_shrink">
+    <value key="name">row-shrink</value>
+    <value key="category">row</value>
+    <value key="label">Responsive Shrink</value>
+    <value key="action">row-toggle-class</value>
+    <value key="icon">false</value>
+    <value key="favorite">false</value>
+    <value key="weight">110</value>
+  </records>
+
+  <records interface="plone.app.mosaic.interfaces.IFormat"
+           prefix="plone.app.mosaic.formats.row_drop_last">
+    <value key="name">row-drop-last</value>
+    <value key="category">row</value>
+    <value key="label">Responsive Drop Last</value>
     <value key="action">row-toggle-class</value>
     <value key="icon">false</value>
     <value key="favorite">false</value>

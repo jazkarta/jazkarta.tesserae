@@ -39,7 +39,6 @@
             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
       <element>bootstrap-carousel</element>
-      <element>jazkarta-tesserae-mosaic</element>
       <element>jazkarta-tesserae</element>
     </value>
     <value key="enabled">True</value>
