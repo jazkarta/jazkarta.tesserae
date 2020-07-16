@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+1.1.0 (2020-07-16)
+------------------
+
+- Fix collection types in collection summary tile.
+  [witekdev]
+
+- New row styles.
+  [alecm]
+
 1.0.2
 -----
 
