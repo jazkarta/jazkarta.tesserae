@@ -1,7 +1,5 @@
 define('jazkarta-tesserae', [
   'jquery',
-  'bootstrap-carousel',
-  'bootstrap-transition'
 ], function($) {
     $(function() {
         $('.item.active').find(".to-animate").addClass('fadeInUp animated');
