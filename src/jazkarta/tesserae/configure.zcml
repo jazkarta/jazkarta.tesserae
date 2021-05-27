@@ -97,6 +97,16 @@
       import_steps="plone.app.registry"
       />
 
+  <genericsetup:upgradeDepends
+      zcml:condition="have plone-5"
+      title="Update resources"
+      sortkey="1"
+      source="1002"
+      destination="1003"
+      profile="jazkarta.tesserae:defualt"
+      import_steps="plone.app.registry"
+      />
+
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="jazkarta.tesserae-hiddenprofiles" />
