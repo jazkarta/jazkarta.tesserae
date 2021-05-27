@@ -116,4 +116,10 @@
     <value key="weight">20</value>
   </records>
 
+  <records interface="plone.app.imagecropping.browser.settings.ISettings">
+    <value key="cropping_for" purge="False">
+      <element>banner</element>
+    </value>
+  </records>
+
 </registry>

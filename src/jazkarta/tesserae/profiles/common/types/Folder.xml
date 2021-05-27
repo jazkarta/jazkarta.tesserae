@@ -4,7 +4,7 @@
  <property name="view_methods" purge="False">
   <element value="tesserae-slider-view"/>
  </property>
- <action title="Slider Configuration" action_id="tesserae_slider_config" category="object_buttons"
+ <action title="Slider Configuration" action_id="tesserae_slider_config" category="object"
          condition_expr="python:object.getProperty('layout', None) == 'tesserae-slider-view'"
          url_expr="string:${object_url}/@@tesserae-slider-config" visible="True">
     <permission value="Modify portal content" />

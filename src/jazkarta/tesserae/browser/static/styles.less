@@ -67,7 +67,7 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
       a {
         pointer-events: auto;
       }
-      h3, h4 {
+      h3.slide-leade, h4.slide-sub-lead {
         color: @white;
       }
       padding: 0;
@@ -87,6 +87,11 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
       display: inline-block;
       border: 2px solid @black;
       text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+    }
+  }
+  .carousel-control {
+    .icon-prev:before, .icon-next:before {
+      color: @white;
     }
   }
   span.banner-img {
