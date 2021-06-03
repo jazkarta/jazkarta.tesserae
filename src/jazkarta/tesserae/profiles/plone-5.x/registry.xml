@@ -61,4 +61,10 @@
     <value key="last_compilation">2021-05-26 13:00:00</value>
   </records>
 
+  <records interface="plone.app.imagecropping.browser.settings.ISettings">
+    <value key="cropping_for" purge="False">
+      <element>banner</element>
+    </value>
+  </records>
+
 </registry>
