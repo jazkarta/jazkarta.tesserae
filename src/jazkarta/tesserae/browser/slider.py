@@ -30,7 +30,7 @@ class SliderView(BrowserView):
         for obj in content:
             item = {}
             if getattr(obj, 'link', None) or getattr(obj, 'content', None):
-                if obj.link:
+                if getattr(obj, 'link', None):
                     item['url'] = obj.link
                 else:
                     brain = uuidToCatalogBrainUnrestricted(obj.content)
@@ -39,7 +39,7 @@ class SliderView(BrowserView):
 
             elif getattr(obj, 'getRemoteUrl', None):
                 item['url'] = obj.getRemoteUrl()
-            else:
+            elif obj.portal_type not in ('Image',):
                 item['url'] = obj.absolute_url()
             item['title'] = obj.title
             item['description'] = obj.description

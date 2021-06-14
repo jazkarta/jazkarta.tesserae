@@ -23,7 +23,7 @@
             <div class="carousel-item item"
                  tal:repeat="item items"
                  tal:attributes="class python:'item' + (repeat['item'].index == 0 and ' active' or '')">
-              <a href="${item/url}" title="${item/title}" tal:omit-tag="not:item/url">
+              <a href="${item/url|nothing}" title="${item/title}" tal:omit-tag="not:item/url|nothing">
                 <img src="${item/image_url}" alt="${item/title}" title="${item/title}"
                      class="img-responsive img-full banner-img"
                      tal:condition="not:view/height" />
