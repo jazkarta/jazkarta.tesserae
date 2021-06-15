@@ -1,13 +1,3 @@
-// For Plone 4 implement a fake require/define that operates synchronously
-if (window.define === undefined) {
-    window.define = function (name, requirements, callable) {
-        callable();
-    };
-    window.require = function(requirements, callable) {
-        callable();
-    };
-}
-
 define('jazkarta-tesserae', [
   'jquery',
 ], function($) {
