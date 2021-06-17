@@ -98,6 +98,15 @@
       />
 
   <genericsetup:upgradeDepends
+      title="Add background image tile"
+      sortkey="1"
+      source="1003"
+      destination="1004"
+      profile="jazkarta.tesserae:common"
+      import_steps="plone.app.registry"
+      />
+
+  <genericsetup:upgradeDepends
       zcml:condition="have plone-5"
       title="Update resources"
       sortkey="1"
@@ -147,6 +156,18 @@
       permission="zope.Public"
       schema=".background.IBackgroundImageTile"
       template="templates/background.pt"
+      />
+
+  <plone:tile
+      name="jazkarta.tesserae.responsive_image"
+      title="Responsive Image"
+      description="A tile which displays an image that is swapped for another on mobile"
+      add_permission="cmf.ModifyPortalContent"
+      class=".responsive_image.ResponsiveImageTile"
+      for="*"
+      permission="zope.Public"
+      schema=".responsive_image.IResponsiveImageTile"
+      template="templates/responsive_image.pt"
       />
 
 </configure>

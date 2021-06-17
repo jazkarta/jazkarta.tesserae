@@ -1,0 +1,16 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="plone">
+  <body tal:define="image_url view/image_url;
+                    mobile_image_url python:view.image_url('mobile_image');">
+    <div class="responsive-image-tile">
+        <img class="desktop-image" src="${image_url}" alt="${view/alt_text}" />
+        <img class="mobile-image" src="${mobile_image_url}" alt="${view/alt_text}" />
+    </div>
+  </body>
+</html>

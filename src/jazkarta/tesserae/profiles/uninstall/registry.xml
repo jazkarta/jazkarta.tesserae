@@ -50,5 +50,7 @@
            interface="plone.app.mosaic.interfaces.ITile" remove="True" />
   <records prefix="plone.app.mosaic.app_tiles.jazkarta_tesserae_background_image"
            interface="plone.app.mosaic.interfaces.ITile" remove="True" />
+  <records prefix="plone.app.mosaic.app_tiles.jazkarta_tesserae_responsive_image"
+           interface="plone.app.mosaic.interfaces.ITile" remove="True" />
 
 </registry>

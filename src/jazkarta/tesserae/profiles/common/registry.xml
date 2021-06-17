@@ -116,4 +116,18 @@
     <value key="weight">20</value>
   </records>
 
+  <records prefix="plone.app.mosaic.app_tiles.jazkarta_tesserae_responsive_image"
+           interface="plone.app.mosaic.interfaces.ITile">
+    <value key="name">jazkarta.tesserae.responsive_image</value>
+    <value key="label">Responsive Image</value>
+    <value key="category">advanced</value>
+    <value key="tile_type">app</value>
+    <value key="default_value"></value>
+    <value key="read_only">false</value>
+    <value key="settings">true</value>
+    <value key="favorite">false</value>
+    <value key="rich_text">false</value>
+    <value key="weight">20</value>
+  </records>
+
 </registry>

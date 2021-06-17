@@ -229,3 +229,25 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
       }
   }
 }
+
+.responsive-image-tile {
+  img {
+    display: block;
+    width: auto;
+		max-width: 100%;
+		height: auto;
+		margin: 0 auto;
+    text-align: center;
+    &.mobile-image {
+      display: none;
+    }
+    @media(max-width: (@plone-screen-sm-min - 1)) {
+      &.mobile-image {
+        display: block;
+      }
+      &.desktop-image {
+        display: none;
+      }
+    }
+  }
+}
