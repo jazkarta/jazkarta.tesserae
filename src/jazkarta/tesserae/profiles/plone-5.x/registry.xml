@@ -58,7 +58,7 @@
     <value key="load_async">False</value>
     <value key="load_defer">False</value>
     <value key="depends">plone</value>
-    <value key="last_compilation">2021-05-26 13:00:00</value>
+    <value key="last_compilation">2021-06-17 13:00:00</value>
   </records>
 
   <records interface="plone.app.imagecropping.browser.settings.ISettings">
