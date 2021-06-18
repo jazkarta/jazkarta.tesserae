@@ -30,7 +30,6 @@ class IResponsiveImageTile(model.Schema):
         title=_(u'Select maximum display size'),
         description=_(u'Leave unset for original image size'),
         vocabulary='plone.app.vocabularies.ImagesScales',
-        default='large',
         required=False,
     )
 
