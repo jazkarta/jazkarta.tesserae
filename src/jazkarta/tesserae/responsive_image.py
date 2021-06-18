@@ -19,19 +19,19 @@ class IResponsiveImageTile(model.Schema):
         required=False,
     )
 
+    alt_text = schema.Text(
+        title=_(u'Image Alt Text'),
+        description=_(u'Enter a description of the image for screen readers, etc.'),
+        default=u'',
+        required=True,
+    )
+
     scale = schema.Choice(
         title=_(u'Select maximum display size'),
         description=_(u'Leave unset for original image size'),
         vocabulary='plone.app.vocabularies.ImagesScales',
         default='large',
         required=False,
-    )
-
-    alt_text = schema.Text(
-        title=_(u'Image Alt Text'),
-        description=_(u'Enter a description of the image for screen readers, etc.'),
-        default=u' ',
-        required=True,
     )
 
 
