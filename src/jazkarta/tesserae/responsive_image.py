@@ -19,6 +19,11 @@ class IResponsiveImageTile(model.Schema):
         required=False,
     )
 
+    link = schema.URI(
+        title=_(u'URL link (optional)'),
+        required=False,
+    )
+
     alt_text = schema.Text(
         title=_(u'Image Alt Text'),
         description=_(u'Enter a description of the image for screen readers, etc.'),
@@ -37,6 +42,10 @@ class IResponsiveImageTile(model.Schema):
 class ResponsiveImageTile(PersistentTile):
 
     template = ViewPageTemplateFile('templates/responsive_image.pt')
+
+    @property
+    def link(self):
+        return self.data.get('link', '')
 
     @property
     def alt_text(self):

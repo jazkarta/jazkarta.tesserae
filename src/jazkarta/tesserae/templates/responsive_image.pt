@@ -9,8 +9,10 @@
   <body tal:define="image_url view/image_url;
                     mobile_image_url python:view.image_url('mobile_image');">
     <div class="responsive-image-tile">
+      <a tal:omit-tag="not:view/link|python:True" href="${view/link}" title="${view/alt_text}">
         <img class="desktop-image" src="${image_url}" alt="${view/alt_text}" />
         <img class="mobile-image" src="${mobile_image_url}" alt="${view/alt_text}" />
+      </a>
     </div>
   </body>
 </html>
