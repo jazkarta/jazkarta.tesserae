@@ -49,7 +49,6 @@ setup(
         'plone.app.dexterity',
         'plone.app.mosaic',
         'plone.app.imagecropping',
-        'five.pt',
     ],
     extras_require={
         'test': [
