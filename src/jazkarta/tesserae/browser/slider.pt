@@ -50,34 +50,34 @@
             <span class="icon-next"></span>
           </a>
           <script>
-            try {
-              require(['jazkarta-tesserae'], function () {
-                $(function () {
-                  $('#${c_id}').carousel(${view/slider_config});
-                  $('#${c_id}').on('touchstart', function(event){
-                    const xClick = event.originalEvent.touches[0].pageX;
-                    $(this).one('touchmove', function(event){
-                        const xMove = event.originalEvent.touches[0].pageX;
-                        const sensitivityInPx = 5;
-                        if( Math.floor(xClick - xMove) > sensitivityInPx ){
-                            $(this).carousel('next');
-                        }
-                        else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
-                            $(this).carousel('prev');
-                        }
-                    });
-                    $(this).on('touchend', function(){
-                        $(this).off('touchmove');
-                    });
+            (function () {
+              var _init_slider = function () {
+                $('#${c_id}').carousel(${view/slider_config});
+                $('#${c_id}').on('touchstart', function(event){
+                  const xClick = event.originalEvent.touches[0].pageX;
+                  $(this).one('touchmove', function(event){
+                      const xMove = event.originalEvent.touches[0].pageX;
+                      const sensitivityInPx = 5;
+                      if( Math.floor(xClick - xMove) > sensitivityInPx ){
+                          $(this).carousel('next');
+                      }
+                      else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+                          $(this).carousel('prev');
+                      }
+                  });
+                  $(this).on('touchend', function(){
+                      $(this).off('touchmove');
                   });
                 });
-              });
-            } catch(error) {
-              if (window.console !== undefined) {
-                console.log('Error instantiating carousel');
-                console.error(error);
+              };
+              if (window.require !== undefined) {
+                require(['jazkarta-tesserae'], function () {
+                  $(_init_slider);
+                });
+              } else {
+                $(_init_slider);
               }
-            }
+            })();
           </script>
         </div>
       </metal:slider>

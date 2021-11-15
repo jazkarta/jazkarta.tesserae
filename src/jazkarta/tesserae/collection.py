@@ -19,8 +19,8 @@ class ICollectionSummaryTile(IContentSummaryTile):
         required=True,
         source=CatalogSource(
             object_provides=(
-                'plone.app.contenttypes.behaviors.collection.ICollection'
-                '.ISyndicatableCollection',
+                'plone.app.contenttypes.behaviors.collection.ICollection',
+                'plone.app.contenttypes.behaviors.collection.ISyndicatableCollection',
                 'plone.app.collection.interfaces.ICollection',
             )
         ),
