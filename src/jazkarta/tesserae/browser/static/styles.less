@@ -191,6 +191,28 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-sliderimage:after {
       margin-right: -15px !important;
     }
   }
+
+  &.mosaic-row-equal-height {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    .mosaic-grid-cell {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-content: stretch;
+      height: auto !important;
+      .mosaic-tile, .mosaic-tile-content {
+        flex-direction: column;
+        display: flex;
+        flex: 1 1 100%;
+      }
+    }
+    .card {
+      flex: 1 100%;
+    }
+  }
 }
 
 .mosaic-row-shrink {

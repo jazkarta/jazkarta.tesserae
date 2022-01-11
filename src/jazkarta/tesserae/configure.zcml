@@ -107,6 +107,15 @@
       />
 
   <genericsetup:upgradeDepends
+      title="Add equal height tile row"
+      sortkey="1"
+      source="1004"
+      destination="1005"
+      profile="jazkarta.tesserae:common"
+      import_steps="plone.app.registry"
+      />
+
+  <genericsetup:upgradeDepends
       zcml:condition="have plone-5"
       title="Update resources"
       sortkey="1"
