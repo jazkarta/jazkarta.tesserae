@@ -10,6 +10,7 @@ from plone.autoform import directives as form
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
+from plone.supermodel.directives import primary
 from Products.CMFCore.interfaces import IFolderish
 from zope import schema
 from zope.component import adapter
@@ -25,6 +26,7 @@ class ISliderImage(model.Schema, IImage):
         title=_(u'Image'),
         required=True,
     )
+    primary('image')
 
     content = schema.TextLine(
         title=_(u'Internal Content Link'),
